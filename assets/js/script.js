@@ -18,10 +18,9 @@ document.querySelectorAll('.nav-link').forEach(link => {
 });
 
 // Select form elements
-const form = document.querySelector('form');
+const form = document.getElementById('contact-form');
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
-const phoneInput = document.getElementById('phone');
 const messageInput = document.getElementById('message');
 const submitBtn = form.querySelector('button[type="submit"]');
 const formMessage = document.getElementById('form-message');
@@ -39,10 +38,9 @@ form.addEventListener('submit', async (e) => {
     // Validate all fields
     const isNameValid = validateName();
     const isEmailValid = validateEmail();
-    const isPhoneValid = validatePhone();
     const isMessageValid = validateMessage();
 
-    if (!isNameValid || !isEmailValid || !isPhoneValid || !isMessageValid) {
+    if (!isNameValid || !isEmailValid || !isMessageValid) {
         return;
     }
 
@@ -53,13 +51,13 @@ form.addEventListener('submit', async (e) => {
 
     try {
         // Using Formspree as example backend
-        const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-            method: 'POST',
-            body: new FormData(form),
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
+        const response = await fetch('https://formspree.io/f/mbloagnd', {
+    method: 'POST',
+    body: new FormData(form),
+    headers: {
+        'Accept': 'application/json'
+    }
+});
 
         if (!response.ok) {
             throw new Error(await response.text());
@@ -73,7 +71,7 @@ form.addEventListener('submit', async (e) => {
         showMessage('Failed to send message. Please try again later.', 'error');
     } finally {
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Submit';
+        submitBtn.textContent = 'Send Message';
     }
 });
 
@@ -100,17 +98,7 @@ function validateEmail() {
     return true;
 }
 
-function validatePhone() {
-    const value = phoneInput.value.trim();
-    const phonePattern = /^[0-9]{10,15}$/;
-    
-    if (!phonePattern.test(value)) {
-        showError(phoneInput, 'Please enter 10-15 digits');
-        return false;
-    }
-    clearError(phoneInput);
-    return true;
-}
+
 
 function validateMessage() {
     const value = messageInput.value.trim();
@@ -146,14 +134,22 @@ function clearError(input) {
 
 function showMessage(message, type) {
     formMessage.textContent = message;
-    formMessage.className = type; // 'success' or 'error'
-    formMessage.classList.remove('hidden');
     
+    // Remove any previous type classes
+    formMessage.classList.remove('success', 'error');
+
+    // Add the new type (either 'success' or 'error')
+    formMessage.classList.add(type);
+
+    // Make sure the message is visible
+    formMessage.classList.remove('hidden');
+
     // Auto-hide after 5 seconds
     setTimeout(() => {
         formMessage.classList.add('hidden');
     }, 5000);
 }
+
 
 //Uopdate the active nav bar item w
 // Get all sections and nav links

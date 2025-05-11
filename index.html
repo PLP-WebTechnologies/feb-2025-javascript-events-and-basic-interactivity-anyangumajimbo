@@ -47,7 +47,7 @@
                     <li><a href="#blog" class="nav-link" data-section="blog">Blog</a></li>
                     <li><a href="#pages" class="nav-link" data-section="pages">Pages</a></li>
                     <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
-                    <li><a href="assets/contact_me.html" class="btn btn-success" data-section="assets/contact_me.html">Hire Me</a></li>
+                    <li><a href="assets/contact_me.html" class="btn btn-success" data-section="assets/contact_me.html" target="_blank">Hire Me</a></li>
                 </ul>
 
                 <!-- Search Toggle -->
@@ -85,7 +85,7 @@
 
                     <div
                         class="d-flex gap-3 flex-column flex-sm-row justify-content-center justify-content-lg-start align-items-center">
-                        <a href="assets/contact_me.html" class="btn btn-lg btn-hire-me">Hire Me</a>
+                        <a href="assets/contact_me.html" class="btn btn-success" data-section="assets/contact_me.html">Hire Me</a>
                         <a href="#portfolio" class="btn btn-lg transparent-btn">My Portfolio</a>
                     </div>
                 </div>
@@ -492,28 +492,36 @@
     <footer>
     <div class="container text-center mb-4">
         <!-- Contact Form -->
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <form action="#" method="POST" class="text-start">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Your Name</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Your Email</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Your Message</label>
-                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
-                    </div>
-                    
-                    <div id="form-message" class="hidden"></div>
-    <button type="submit">Send Message</button>
-                </form>
+<!-- Contact Form -->
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h2>Let's Work Together</h2>
+            <p>Have a project or opportunity you'd like to discuss? Fill out the form below and I'll get back to you
+                shortly.</p>
+        <form id="contact-form" action="https://formspree.io/f/mbloagnd" method="POST" class="text-start">
+            <div class="mb-3">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
             </div>
-        </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Your Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Your Message</label>
+                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+            </div>
+            
+           <!-- Form status message -->
+<div id="form-message" class="hidden mt-3"></div>
+
+
+            
+            <!-- Updated Submit Button -->
+            <button type="submit" class="btn btn-success">Send Message</button>
+        </form>
     </div>
+</div>
         <!-- Centered Heading -->
         <h4 class="mb-4" style="text-align: center;"><i class="fab fa-asymmetrik"></i> UI Portfolio</h4>
         
