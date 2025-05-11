@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive UI Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="theme-toggle" hidden />
+    <label for="theme-toggle" class="theme-icon" aria-label="Toggle theme">
+        <span class="sun">☀️</span>
+        <span class="moon">🌙</span>
+    </label>
+
+    <!-- Navbar Toggle -->
+    <input type="checkbox" id="nav-toggle" hidden />
+
+    <!-- Navbar -->
+    <nav class="navbar-wrapper">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-2">
+                <img src="assets/images/landingpage logo.png" alt="Logo" class="nav-logo" />
+                <a href="#" class="navbar-brand">UI Portfolio</a>
+            </div>
+
+            <!-- Hamburger Icon -->
+            <label for="nav-toggle" class="hamburger">
+                <i class="fas fa-bars"></i>
+            </label>
+
+            <!-- Nav Links -->
+            <div class="nav-links">
+                <ul class="navbar-nav d-flex flex-column flex-lg-row align-items-lg-center justify-content-center" style="gap: 14px;">
+                    <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                    <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                    <li><a href="#services" class="nav-link" data-section="services">Services</a></li>
+                    <li><a href="#blog" class="nav-link" data-section="blog">Blog</a></li>
+                    <li><a href="#pages" class="nav-link" data-section="pages">Pages</a></li>
+                    <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+                    <li><a href="assets/contact_me.html" class="btn btn-success" data-section="assets/contact_me.html">Hire Me</a></li>
+                </ul>
+
+                <!-- Search Toggle -->
+                <input type="checkbox" id="search-toggle" hidden />
+                <label for="search-toggle" class="nav-icon"><i class="fas fa-search"></i></label>
+                <div class="navbar-search-container">
+                    <label for="search-toggle" class="close-search">&times;</label>
+                    <input type="text" class="navbar-search-input" placeholder="Type to search..." />
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section id="home" class="hero d-flex align-items-center"
+        style="background: linear-gradient(rgba(24, 48, 54, 0.85), rgba(24, 48, 54, 0.85)), url('/assets/images/banner1.jpg') no-repeat center center; background-size: cover; height: 100vh;">
+        <div class="container">
+            <div class="row">
+                <!-- Left Text -->
+                <div class="col-lg-7 ps-lg-3 px-3 text-center text-lg-start mb-4 mb-lg-0">
+                    <h3 class="mb-3 text-white fw-semibold lh-sm fs-3 font-dm-sans">Hi, I'm John Watson</h3>
+
+                    <!-- Animated Words -->
+                    <div class="animated-words text-white mb-3">
+                        <span class="word">Web Developer</span>
+                        <span class="word">UI/UX Designer</span>
+                        <span class="word">Freelancer</span>
+                        <span class="word">Photography</span>
+                        <span class="word">App Development</span>
+                    </div>
+
+                    <p class="lead text-white">
+                        I love Graphic design and Photography and have been working on my portfolio since 2016.
+                        I can give your business a new Creative start right away!
+                    </p>
+
+                    <div
+                        class="d-flex gap-3 flex-column flex-sm-row justify-content-center justify-content-lg-start align-items-center">
+                        <a href="assets/contact_me.html" class="btn btn-lg btn-hire-me">Hire Me</a>
+                        <a href="#portfolio" class="btn btn-lg transparent-btn">My Portfolio</a>
+                    </div>
+                </div>
+
+
+                <!-- Right Image -->
+                <!-- Right Column (empty) -->
+<div class="col-lg-5 d-none d-lg-block">
+    <div class="profile-img-wrapper">
+      <img src="assets/images/profile image.png" alt="Profile Image" class="profile-image">
+    </div>
+  </div>
+  
+  <!-- Profile image for small screens -->
+  <div class="d-block d-lg-none text-center mt-4">
+    <img src="assets/images/profile image.png" alt="Profile Image" class="profile-image">
+  </div>
+  
+    
+                <!-- Navigation Icons Container  -->
+                <div class="position-absolute d-flex flex-column gap-2 icon-buttons">
+                    <!-- Back Icon -->
+                    <button class="btn btn-light rounded-0 shadow-sm px-3 py-2 border-0">
+                        <i class="bi bi-arrow-left"></i>
+                    </button>
+
+                    <!-- Create Icon -->
+                    <button class="btn btn-light rounded-0 shadow-sm px-3 py-2 border-0">
+                        <i class="bi bi-plus-lg"></i>
+                    </button>
+
+                    <!-- Buy Icon -->
+                    <button class="btn btn-light rounded-0 shadow-sm px-3 py-2 border-0">
+                        <i class="bi bi-cart"></i>
+                    </button>
+
+                    <!-- Fast Back Icon -->
+                    <button class="btn btn-light rounded-0 shadow-sm px-3 py-2 border-0">
+                        <i class="bi bi-chevron-double-left"></i>
+                    </button>
+                </div>
+
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about py-5">
+        <div class="container">
+            <div class="row align-items-center g-5">
+
+                <!-- Left Image -->
+                <div class="col-lg-5 text-center">
+                    <img src="assets/images/about_portfolio image .png" alt="Profile"
+                        class="img-fluid rounded-3 shadow">
+                </div>
+
+                <!-- Right Content -->
+                <div class="col-lg-7">
+                    <small class="text-uppercase text-muted">My Biography</small>
+                    <h2 class="mb-4">A Lead UI Designer & Web Developer<br>Based In UK</h2>
+                    <p class="mb-4 text-muted">I love Graphic design and Photography and have been working on my
+                        portfolio since 2016. I can give your business a new Creative start right away! Contact
+                        me
+                        and
+                        we will discuss your projects!</p>
+
+                    <div class="row mb-4">
+                        <div class="col-6">
+                            <p><strong>Name:</strong> John Watson</p>
+                            <p><strong>Email:</strong> example@mail.com</p>
+                        </div>
+                        <div class="col-6">
+                            <p><strong>From:</strong> London, UK</p>
+                            <p><strong>Phone:</strong> +21 234 567 8901</p>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="mb-4">
+                        <span class="me-2">Follow me on</span>
+                        <a href="#" class="text-dark me-2"><i class="bi bi-behance"></i></a>
+                        <a href="#" class="text-dark me-2"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-dark me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-dark"><i class="bi bi-twitter"></i></a>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-success">Hire Me</a>
+                        <a href="#" class="btn btn-outline-success">Download CV</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services Section -->
+    <section id="services" class="services py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="mb-5">What I Do For You</h2>
+
+            <div class="row g-4">
+                <!-- Service 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0 p-4">
+                        <div class="mb-3 text-success fs-1">
+                            <i class="bi bi-laptop"></i>
+                        </div>
+                        <h5 class="card-title mb-3">Web Development</h5>
+                        <p class="card-text text-muted">I craft responsive and SEO-optimized websites using modern
+                            technologies, focusing on performance, usability, and scalable structure.</p>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0 p-4">
+                        <div class="mb-3 text-success fs-1">
+                            <i class="bi bi-phone"></i>
+                        </div>
+                        <h5 class="card-title mb-3">App Development</h5>
+                        <p class="card-text text-muted">From concept to deployment, I develop mobile and web apps that
+                            are intuitive, fast, and tailored to solve real-world user problems.</p>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0 p-4">
+                        <div class="mb-3 text-success fs-1">
+                            <i class="bi bi-camera"></i>
+                        </div>
+                        <h5 class="card-title mb-3">Photography</h5>
+                        <p class="card-text text-muted">I capture moments with a creative edge, offering professional
+                            photography services for brands, events, and personal storytelling.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Services Link -->
+            <div class="mt-4">
+                <a href="#feature-services" class="text-success text-decoration-none fw-semibold">
+                    More Services <i class="bi bi-arrow-right"></i>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Image Section -->
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="assets/images/skills portfolio image.png" alt="Skills Image"
+                        class="img-fluid rounded shadow">
+                </div>
+
+                <!-- Skills Section -->
+                <div class="col-md-6">
+                    <small class="text-uppercase text-muted">My Skills</small>
+                    <h2 class="mb-4">My Featured Skills</h2>
+                    <p>I specialize in Branding and Strategy, and am passionate about creating awesome portfolio
+                        work. I
+                        am always ready to impress the audience with my creativity.</p>
+
+                    <!-- Skill Bars -->
+                    <div class="mb-3">
+                        <h6>UI/UX Design</h6>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" style="width: 80%;">80%</div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <h6>Ideas & Technology</h6>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" style="width: 90%;">90%</div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <h6>Branding Design</h6>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" style="width: 60%;">60%</div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <h6>Responsive Web Design</h6>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" style="width: 85%;">85%</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Section -->
+    <section id="feature-services" class="py-5" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Left Services -->
+                <div class="col-lg-7">
+                    <div class="row g-4">
+
+                        <!-- Single Service -->
+                        <div class="col-6">
+                            <div class="d-flex align-items-start">
+                                <i class="fas fa-code fa-2x text-primary me-3"></i>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Web Development</h6>
+                                    <p class="small text-muted mb-0">I specialize in building high-performance,
+                                        user-friendly websites that are tailored to meet your business goals and adapt
+                                        seamlessly to modern technology trends.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="d-flex align-items-start">
+                                <i class="fas fa-paint-brush fa-2x text-primary me-3"></i>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Design Trends</h6>
+                                    <p class="small text-muted mb-0">Staying ahead of design trends ensures your brand
+                                        looks fresh, engaging, and relevant—combining creativity with functionality for
+                                        lasting impressions.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="d-flex align-items-start">
+                                <i class="fas fa-chart-line fa-2x text-primary me-3"></i>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Research & Analysis</h6>
+                                    <p class="small text-muted mb-0">Data-driven design begins with research. I analyze
+                                        user behavior and market trends to craft strategies that elevate your digital
+                                        presence effectively.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="d-flex align-items-start">
+                                <i class="fas fa-headset fa-2x text-primary me-3"></i>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Customer Support</h6>
+                                    <p class="small text-muted mb-0">Your satisfaction is my priority. I provide prompt,
+                                        friendly support and clear communication throughout every stage of the project.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="d-flex align-items-start">
+                                <i class="fas fa-mobile-alt fa-2x text-primary me-3"></i>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Responsive Design</h6>
+                                    <p class="small text-muted mb-0">Every project I build is optimized to look great on
+                                        any device, ensuring your content remains accessible and visually appealing
+                                        across all screen sizes.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="d-flex align-items-start">
+                                <i class="fas fa-pen-nib fa-2x text-primary me-3"></i>
+                                <div>
+                                    <h6 class="fw-bold mb-1">PSD Design</h6>
+                                    <p class="small text-muted mb-0">Need a pixel-perfect design? I create clean,
+                                        organized PSD files ready for development, ensuring consistency from concept to
+                                        code.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right Image -->
+                <div class="col-lg-5 text-center">
+                    <img src="assets/images/profile image.png" class="img-fluid" alt="Profile Image"
+                        style="max-height: 450px; object-fit: contain;">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Counters Section -->
+    <section id=pages class="py-5" style="background-color: #2d6a4f;">
+        <div class="container">
+            <div class="row text-center text-white">
+
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="counter">
+                        <h2 class="fw-bold">135</h2>
+                        <p>Projects Completed</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="counter">
+                        <h2 class="fw-bold">225</h2>
+                        <p>Working Hours</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="counter">
+                        <h2 class="fw-bold">115</h2>
+                        <p>Support Given</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="counter">
+                        <h2 class="fw-bold">272</h2>
+                        <p>Happy Clients</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Section -->
+    <section id="blog" class="py-5" style="background-color: #f8f9fa;">
+        <div class="container text-center">
+
+            <h2 class="mb-5 fw-bold">My Success Work</h2>
+
+            <div class="row g-4">
+
+                <!-- success Item -->
+                <div class="col-12 col-md-4">
+                    <img src="assets/images/blog/blog1.jpg" alt="Project 1" class="img-fluid rounded shadow-sm">
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <img src="assets/images/blog/blog2.jpg" alt="Project 2" class="img-fluid rounded shadow-sm">
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <img src="assets/images/blog/blog3.jpg" alt="Project 3" class="img-fluid rounded shadow-sm">
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <img src="assets/images/blog/blog4.jpg" alt="Project 4" class="img-fluid rounded shadow-sm">
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <img src="assets/images/blog/blog5.jpg" alt="Project 5" class="img-fluid rounded shadow-sm">
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <img src="assets/images/blog/blog6.jpg" alt="Project 6" class="img-fluid rounded shadow-sm">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Logos Section -->
+    <section class="py-5" style="background-color: #2d6a4f;">
+        <div class="logo-slider">
+            <div class="logo-track">
+                <img src="assets/images/logo/logo1.png" alt="Logo 1" class="logo-img" />
+                <img src="assets/images/logo/logo2.png" alt="Logo 2" class="logo-img" />
+                <img src="assets/images/logo/logo3.png" alt="Logo 3" class="logo-img" />
+                <img src="assets/images/logo/logo4.png" alt="Logo 4" class="logo-img" />
+                <img src="assets/images/logo/logo5.png" alt="Logo 5" class="logo-img" />
+                <!-- Duplicate logos for infinite scroll effect -->
+                <img src="assets/images/logo/logo1.png" alt="Logo 1" class="logo-img" />
+                <img src="assets/images/logo/logo2.png" alt="Logo 2" class="logo-img" />
+                <img src="assets/images/logo/logo3.png" alt="Logo 3" class="logo-img" />
+                <img src="assets/images/logo/logo4.png" alt="Logo 4" class="logo-img" />
+                <img src="assets/images/logo/logo5.png" alt="Logo 5" class="logo-img" />
+            </div>
+        </div>
+
+    </section>
+
+   
+    <!-- Empty White Space Section -->
+ <section class="bg-white" style="height: 100px; width: 100%;">
+    <div class="container">
+        <!-- Empty container just for spacing -->
+    </div>
+</section>
+
+ <!-- Footer -->
+<!-- Footer Contact Section -->
+<section id="contact" class="text-white pt-5" style="background-color: #061e24;">
+    <footer>
+    <div class="container text-center mb-4">
+        <!-- Contact Form -->
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form action="#" method="POST" class="text-start">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Your Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Your Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+                    </div>
+                    
+                    <div id="form-message" class="hidden"></div>
+    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+        <!-- Centered Heading -->
+        <h4 class="mb-4" style="text-align: center;"><i class="fab fa-asymmetrik"></i> UI Portfolio</h4>
+        
+        <!-- Contact Info - Centered and stacked on mobile, row on desktop -->
+        <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-4">
+            <p class="mb-0"><i class="fas fa-phone-alt me-2"></i> +12 345 678 900</p>
+            <p class="mb-0"><i class="fas fa-envelope me-2"></i> info@example.com</p>
+            <p class="mb-0"><i class="fas fa-map-marker-alt me-2"></i> 208 Avenue street, UK - 62617</p>
+        </div>
+    </div>
+
+   <!-- Social Media & Copyright -->
+<div class="py-3 px-0" style="background-color: #02191e;">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <!-- Copyright -->
+        <div class="mb-2 mb-md-0">
+            <p class="small mb-0">&copy; 2022  UI Portfolio. All Rights Reserved.</p>
+        </div>
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="#" class="text-white me-3 fs-5"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white me-3 fs-5"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white me-3 fs-5"><i class="fab fa-google"></i></a>
+            <a href="#" class="text-white me-3 fs-5"><i class="fab fa-pinterest"></i></a>
+            <a href="#" class="text-white fs-5"><i class="fab fa-vk"></i></a>
+        </div>
+    </div>
+</div>
+</footer>
+</section>
+<!-- Back to Top Button -->
+<button id="topBtn" class="back-to-top" onclick="scrollToTop()">↑</button>
+<script src="/assets/js/script.js" defer></script>
+</body>
+</html>
