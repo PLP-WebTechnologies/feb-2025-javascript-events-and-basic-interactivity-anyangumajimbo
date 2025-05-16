@@ -246,14 +246,19 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             const target = +entry.target.innerText;
             let count = 0;
+            const increment = Math.ceil(target / 100);
+            entry.target.innerText = 0;
             const interval = setInterval(() => {
-                entry.target.innerText = count;
-                if (count >= target) clearInterval(interval);
-                count += Math.ceil(target / 100);
+                count += increment;
+                if (count >= target) {
+                    entry.target.innerText = target;
+                    clearInterval(interval);
+                } else {
+                    entry.target.innerText = count;
+                }
             }, 20);
             observer.unobserve(entry.target);
         }
     });
 });
 counters.forEach(counter => observer.observe(counter));
-

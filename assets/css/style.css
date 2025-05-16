@@ -35,10 +35,6 @@ body {
     background-color: #061e24; /* Green background when scrolled */
 }
 
-.nav-logo {
-  height: 40px;
-}
-
 .navbar-brand {
   font-weight: 600;
   font-size: 1.5rem;
@@ -52,6 +48,7 @@ body {
   font-size: 1.5rem;
   color: white;
   cursor: pointer;
+  
 }
 
 .nav-icon {
@@ -100,7 +97,8 @@ body {
 .navbar-search-container {
   position: fixed;
   top: 0;
-  left: 0;
+  /* left: 50px; */
+  right: 0;
   width: 100%;
   height: 60px;
   background-color: #021f24;
@@ -137,8 +135,23 @@ body {
 
 /* Responsive Collapse Menu (CSS-only) */
 @media (max-width: 991px) {
+  .navbar-wrapper .container {
+    position: relative;
+  }
   .hamburger {
     display: block;
+    position: absolute;
+    left: 70%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1050;
+  }
+  .theme-icon {
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+    z-index: 2000;
+
   }
 
   .nav-links {
@@ -173,7 +186,7 @@ body {
 .theme-icon {
   position: fixed;
   top: 1rem;
-  right: 3rem;
+  right: 2rem;
   cursor: pointer;
   z-index: 9999;
   font-size: 1.5rem;
@@ -295,7 +308,7 @@ body {
 }
 
 .profile-img-wrapper img {
-  max-height: 90vh;
+  max-height: 120vh;
   height: auto;
   width: auto;
   object-fit: contain;
@@ -310,6 +323,7 @@ body {
 /* Adjust the right position for the animations on small screens */
   .animated-words {
     text-align: left !important;
+    
   }
 }
 
@@ -390,11 +404,11 @@ ul.follow-social li a {
 }
 
 .animated-words .word {
-  font-family: 'Dancing Script', cursive;
+  font-family: Montserrat;
   font-size: 2rem;
   font-weight: 700;
-  color: var(--text-color, white);
-  text-shadow: 0 0 8px #00c896, 0 0 16px #00c896, 0 0 24px #00c896;
+  color: transparent;                  /* Transparent fill */
+  -webkit-text-stroke: 2px #fff;     /* White outline, adjust thickness as needed */
   position: absolute;
   width: 100%;
   opacity: 0;
@@ -631,8 +645,12 @@ ul.follow-social li a {
 /* For smaller devices (under 768px) */
 @media (max-width: 768px) {
   .hero {
-    padding-top: 120px;
+    padding-top: 150px;
     /* Adjust padding for smaller screens */
+  }
+
+  .lead.text-white {
+    font-size: 1rem; /* or 16px, adjust as needed */
   }
 }
 
@@ -643,6 +661,10 @@ ul.follow-social li a {
     /* More padding for very small screens */
   }
 }
+
+.lead.text-white {
+    font-size: 1rem; /* or 16px, adjust as needed */
+  }
 
 /* About Section */
 .about {
@@ -931,12 +953,12 @@ form button:hover {
 
 /* Profile image: Adjust position as need */
 :root {
-  --hero-img-right: 150px; /* You can change this to 80px, 100px etc. */
+  --hero-img-right: 250px; /* You can change this to 80px, 100px etc. */
 }
 
 :root {
-  --icon-top: 60%;
-  --icon-bottom: auto;
+  --icon-top: 40%; /* Adjust the position of navigation icons container */
+  --icon-bottom: auto; 
   --icon-left: 95%;
   --icon-transform: translateY(-50%);
   --icon-direction: column;
